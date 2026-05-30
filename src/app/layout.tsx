@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/next";
 import { fontVariables } from "@/lib/fonts";
 import { ReactLenis } from "lenis/react";
 import { GrainOverlay } from "@/components/ui/GrainOverlay";
@@ -26,6 +27,7 @@ export default function RootLayout({
           {children}
           <Footer />
         </ReactLenis>
+        <Analytics />
       </body>
     </html>
   );
