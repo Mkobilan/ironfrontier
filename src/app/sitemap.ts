@@ -1,7 +1,7 @@
 import type { MetadataRoute } from 'next';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://ironfrontier.com';
+  const baseUrl = 'https://ironfrontier.vercel.app';
 
   return [
     {

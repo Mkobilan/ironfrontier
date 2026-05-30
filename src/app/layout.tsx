@@ -9,7 +9,7 @@ import "./globals.css";
 import "@/styles/animations.css";
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://ironfrontier.com'),
+  metadataBase: new URL('https://ironfrontier.vercel.app'),
   title: {
     default: "Iron Frontier | Premium Men's Transformation Retreat Thailand",
     template: "%s | Iron Frontier"
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Iron Frontier | Premium Men's Transformation Retreat Thailand",
     description: "An exclusive all-inclusive men's transformation retreat in Lampang, Northern Thailand. Muay Thai training, mental resilience workshops, and purposeful recovery.",
-    url: 'https://ironfrontier.com',
+    url: 'https://ironfrontier.vercel.app',
     siteName: 'Iron Frontier',
     locale: 'en_US',
     type: 'website',
@@ -54,10 +54,10 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": "SportsActivityLocation",
   "name": "Iron Frontier",
-  "image": "https://ironfrontier.com/images/property/iron_frontier_brand_logo_1780129626942.png",
+  "image": "https://ironfrontier.vercel.app/images/property/iron_frontier_brand_logo_1780129626942.png",
   "description": "An exclusive all-inclusive men's transformation retreat in Lampang, Northern Thailand. We combine elite Muay Thai/MMA physical training with structured mental resilience workshops, professional body recovery, and genuine life-long brotherhood.",
-  "@id": "https://ironfrontier.com/#organization",
-  "url": "https://ironfrontier.com",
+  "@id": "https://ironfrontier.vercel.app/#organization",
+  "url": "https://ironfrontier.vercel.app",
   "telephone": "",
   "address": {
     "@type": "PostalAddress",

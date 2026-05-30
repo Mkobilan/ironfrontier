@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: ['/private/'],
     },
-    sitemap: 'https://ironfrontier.com/sitemap.xml',
+    sitemap: 'https://ironfrontier.vercel.app/sitemap.xml',
   };
 }
