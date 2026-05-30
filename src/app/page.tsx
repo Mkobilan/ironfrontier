@@ -5,6 +5,7 @@ import { PillarSection } from '@/components/landing/PillarSection';
 import { PropertySection } from '@/components/landing/PropertySection';
 import { WhoSection } from '@/components/landing/WhoSection';
 import { BrotherhoodSection } from '@/components/landing/BrotherhoodSection';
+import { FAQSection } from '@/components/landing/FAQSection';
 import { CTASection } from '@/components/landing/CTASection';
 
 export default function Home() {
@@ -39,7 +40,9 @@ export default function Home() {
       <PropertySection />
       <WhoSection />
       <BrotherhoodSection />
+      <FAQSection />
       <CTASection />
     </main>
   );
 }
+
