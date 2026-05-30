@@ -1,0 +1,114 @@
+.section {
+  background-color: var(--color-void);
+  position: relative;
+}
+
+.quoteWrapper {
+  margin: var(--space-4xl) 0;
+  text-align: center;
+}
+
+.quote {
+  font-family: var(--font-playfair);
+  font-size: clamp(var(--text-2xl), 4vw, var(--text-4xl));
+  font-style: italic;
+  color: var(--color-amber);
+  line-height: 1.3;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-2xl);
+  margin-top: var(--space-4xl);
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: 1fr 1.5fr 1fr;
+    gap: var(--space-3xl);
+    align-items: center;
+  }
+}
+
+.card {
+  background-color: var(--color-charcoal);
+  border: 1px solid var(--color-dust);
+  padding: var(--space-2xl);
+  border-radius: var(--radius-sm);
+  height: 100%;
+}
+
+.cardHeader {
+  margin-bottom: var(--space-xl);
+  border-bottom: 1px solid var(--color-dust);
+  padding-bottom: var(--space-sm);
+}
+
+.weAre, .not {
+  font-family: var(--font-rye);
+  font-size: var(--text-2xl);
+  letter-spacing: 0.05em;
+}
+
+.weAre {
+  color: var(--color-gold);
+}
+
+.not {
+  color: var(--color-sandstone);
+}
+
+.list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.list li {
+  font-family: var(--font-ibm-sans);
+  font-size: var(--text-base);
+  color: var(--color-bone);
+  position: relative;
+  padding-left: var(--space-lg);
+}
+
+.list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 10px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--color-dust);
+}
+
+.card:first-child .list li::before {
+  background-color: var(--color-amber);
+}
+
+.cardCenter {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+  padding: 0 var(--space-lg);
+}
+
+.centerText {
+  font-family: var(--font-ibm-sans);
+  font-size: var(--text-lg);
+  color: var(--color-sandstone);
+  line-height: 1.7;
+}
+
+@media (max-width: 1023px) {
+  .cardCenter {
+    padding: 0;
+    order: -1; /* Move to top on mobile */
+    margin-bottom: var(--space-xl);
+  }
+}

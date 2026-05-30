@@ -1,0 +1,13 @@
+.section {
+  background-color: var(--color-slate);
+  position: relative;
+  border-top: 1px solid rgba(255, 248, 235, 0.05);
+  border-bottom: 1px solid rgba(255, 248, 235, 0.05);
+}
+
+.pillarContainer {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3xl);
+  margin-top: var(--space-4xl);
+}

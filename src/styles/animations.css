@@ -1,0 +1,57 @@
+/* === REUSABLE ANIMATIONS === */
+
+/* Fade Up Reveal */
+.reveal-up {
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+.reveal-up.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity var(--transition-slow), transform var(--transition-slow);
+}
+
+/* Fade In */
+.fade-in {
+  opacity: 0;
+}
+
+.fade-in.is-visible {
+  opacity: 1;
+  transition: opacity var(--transition-glacial);
+}
+
+/* Staggered Children (Requires GSAP for precise timing, but CSS fallback) */
+.stagger-children > * {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.stagger-children.is-visible > * {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity var(--transition-slow), transform var(--transition-slow);
+}
+
+.stagger-children.is-visible > *:nth-child(1) { transition-delay: 100ms; }
+.stagger-children.is-visible > *:nth-child(2) { transition-delay: 200ms; }
+.stagger-children.is-visible > *:nth-child(3) { transition-delay: 300ms; }
+.stagger-children.is-visible > *:nth-child(4) { transition-delay: 400ms; }
+.stagger-children.is-visible > *:nth-child(5) { transition-delay: 500ms; }
+
+/* Parallax Container */
+.parallax-wrapper {
+  overflow: hidden;
+  position: relative;
+}
+
+.parallax-bg {
+  position: absolute;
+  top: -15%;
+  left: 0;
+  width: 100%;
+  height: 130%;
+  object-fit: cover;
+  pointer-events: none;
+}

@@ -1,0 +1,115 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-charcoal);
+  border: 1px solid rgba(200, 149, 108, 0.1);
+  padding: var(--space-2xl) var(--space-xl);
+  border-radius: var(--radius-sm);
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background-color: var(--color-amber);
+  opacity: 0.5;
+}
+
+@media (min-width: 768px) {
+  .card {
+    flex-direction: row;
+    gap: var(--space-3xl);
+    padding: var(--space-3xl);
+  }
+
+  .odd {
+    flex-direction: row-reverse;
+  }
+  
+  .odd::before {
+    left: auto;
+    right: 0;
+  }
+}
+
+.iconWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--space-xl);
+  flex-shrink: 0;
+}
+
+@media (min-width: 768px) {
+  .iconWrapper {
+    margin-bottom: 0;
+    width: 200px;
+  }
+}
+
+.icon {
+  font-size: 5rem;
+  line-height: 1;
+  filter: drop-shadow(0 4px 10px rgba(0,0,0,0.3));
+}
+
+.content {
+  flex-grow: 1;
+}
+
+.name {
+  font-family: var(--font-rye);
+  font-size: var(--text-3xl);
+  color: var(--color-bone);
+  margin-bottom: var(--space-xs);
+  letter-spacing: 0.05em;
+}
+
+.tagline {
+  font-family: var(--font-playfair);
+  font-size: var(--text-lg);
+  color: var(--color-amber);
+  font-style: italic;
+  margin-bottom: var(--space-lg);
+}
+
+.description {
+  font-family: var(--font-ibm-sans);
+  font-size: var(--text-base);
+  color: var(--color-sandstone);
+  line-height: 1.6;
+  margin-bottom: var(--space-xl);
+}
+
+.featureList {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-sm);
+}
+
+@media (min-width: 640px) {
+  .featureList {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.featureList li {
+  font-family: var(--font-ibm-sans);
+  font-size: var(--text-sm);
+  color: var(--color-weathered);
+  position: relative;
+  padding-left: var(--space-md);
+}
+
+.featureList li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: var(--color-amber);
+}
