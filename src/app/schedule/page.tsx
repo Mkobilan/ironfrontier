@@ -3,6 +3,7 @@ import { SectionHeading } from '@/components/ui/SectionHeading';
 import { Button } from '@/components/ui/Button';
 import { Divider } from '@/components/ui/Divider';
 import { ScheduleTimeline } from './ScheduleClient';
+import { WeekJourney } from './WeekJourney';
 import styles from './schedule.module.css';
 
 export const metadata: Metadata = {
@@ -74,20 +75,66 @@ const scheduleItems = [
   },
 ];
 
-const included = [
-  'Accommodation — private and shared options',
-  'All meals — breakfast, lunch, dinner',
-  'Muay Thai & MMA training with Thai coaches',
-  'Mental health & self-development workshops',
-  'Supplements & recovery essentials',
-  'Welcome kit with training gear',
-  'Airport transfers from Chiang Mai',
-];
-
-const notIncluded = [
-  'Flights to Chiang Mai',
-  'Travel insurance',
-  'Personal spending & souvenirs',
+const CATEGORIZED_INCLUSIONS = [
+  {
+    category: "Accommodation",
+    items: [
+      "Private room or premium shared options",
+      "Air conditioning and modern amenities",
+      "Dedicated workspace for integration",
+      "Access to all compound facilities"
+    ]
+  },
+  {
+    category: "Combat Training",
+    items: [
+      "Twice-daily Muay Thai sessions",
+      "Grappling and MMA fundamentals",
+      "World-class Thai coaches",
+      "Welcome kit with premium gear",
+      "All skill levels accommodated"
+    ]
+  },
+  {
+    category: "Inner Work",
+    items: [
+      "Daily men's group circles",
+      "1-on-1 coaching session",
+      "Breathwork & journaling workshops",
+      "Resilience & leadership mapping",
+      "30-day post-retreat action plan"
+    ]
+  },
+  {
+    category: "Recovery",
+    items: [
+      "Morning yoga and mobility",
+      "Guided meditation sessions",
+      "Unlimited ice bath access",
+      "Traditional Thai massage",
+      "Focus on sleep optimization"
+    ]
+  },
+  {
+    category: "Fuel",
+    items: [
+      "3 high-protein meals daily",
+      "Locally sourced Thai and Western food",
+      "Post-training protein & supplements",
+      "Unlimited hydration and coffee",
+      "Completely dry property (no alcohol)"
+    ]
+  },
+  {
+    category: "Logistics",
+    items: [
+      "Airport transfer from Chiang Mai",
+      "All local transportation",
+      "Cultural temple excursions",
+      "Laundry service (twice weekly)",
+      "Access to Alumni Network"
+    ]
+  }
 ];
 
 export default function SchedulePage() {
@@ -121,6 +168,8 @@ export default function SchedulePage() {
         </div>
       </section>
 
+      <WeekJourney />
+
       <Divider />
 
       {/* Pricing Section */}
@@ -133,63 +182,84 @@ export default function SchedulePage() {
           />
 
           <div className={styles.pricingGrid}>
-            {/* Price Card */}
+            
+            {/* The Taster */}
             <div className={styles.priceCard}>
-              <div className={styles.priceEyebrow}>All-Inclusive Packages</div>
+              <div className={styles.priceEyebrow}>The Taster</div>
+              <div className={styles.priceTitle}>Weekend</div>
+              <div className={styles.priceAmount}>$500</div>
+              <div className={styles.priceDuration}>3 Nights / 4 Days</div>
               <ul className={styles.pricingList}>
-                <li>
-                  <div className={styles.priceHeader}>
-                    <span className={styles.priceDuration}>7 days:</span> <span className={styles.priceValue}>$1,200</span>
-                  </div>
-                  <div className={styles.priceDesc}>Most popular, entry point for international travelers</div>
-                </li>
-                <li>
-                  <div className={styles.priceHeader}>
-                    <span className={styles.priceDuration}>14 days:</span> <span className={styles.priceValue}>$2,000</span>
-                  </div>
-                  <div className={styles.priceDesc}>Deep transformation, discounted daily rate</div>
-                </li>
-                <li>
-                  <div className={styles.priceHeader}>
-                    <span className={styles.priceDuration}>30 days:</span> <span className={styles.priceValue}>$3,500</span>
-                  </div>
-                  <div className={styles.priceDesc}>Full lifestyle reset, serious commitment</div>
-                </li>
-                <li>
-                  <div className={styles.priceHeader}>
-                    <span className={styles.priceDuration}>Weekend (3-4 days):</span> <span className={styles.priceValue}>$500</span>
-                  </div>
-                  <div className={styles.priceDesc}>Local Thai/expat market, Chiang Mai day-trippers</div>
-                </li>
+                <li>Introduction to the pillars</li>
+                <li>4x Muay Thai sessions</li>
+                <li>1x Men's Circle</li>
+                <li>All meals & recovery access</li>
+                <li>Ideal for Chiang Mai expats</li>
               </ul>
-              <div className={styles.priceDivider} />
-              <div className={styles.priceFeature}>
-                Lampang, Northern Thailand
-              </div>
             </div>
 
-            {/* Details */}
-            <div className={styles.detailsCard}>
-              <div className={styles.detailBlock}>
-                <div className={styles.detailLabel}>What&apos;s Included</div>
+            {/* The Full Frontier */}
+            <div className={`${styles.priceCard} ${styles.priceCardPopular}`}>
+              <div className={styles.priceEyebrow}>★ Most Popular</div>
+              <div className={styles.priceTitle}>The Full Frontier</div>
+              <div className={styles.priceAmount}>$1,200</div>
+              <div className={styles.priceDuration}>7 Nights / 8 Days</div>
+              <ul className={styles.pricingList}>
+                <li>The complete transformation arc</li>
+                <li>12x Muay Thai sessions</li>
+                <li>Daily Inner Work & Brotherhood</li>
+                <li>1-on-1 coaching & mapping</li>
+                <li>30-day integration plan</li>
+              </ul>
+            </div>
+
+            {/* The Deep Dive */}
+            <div className={styles.priceCard}>
+              <div className={styles.priceEyebrow}>The Deep Dive</div>
+              <div className={styles.priceTitle}>14 Days</div>
+              <div className={styles.priceAmount}>$2,200</div>
+              <div className={styles.priceDuration}>14 Nights / 15 Days</div>
+              <ul className={styles.pricingList}>
+                <li>Sustained lifestyle reset</li>
+                <li>Discounted daily rate</li>
+                <li>Advanced combat progression</li>
+                <li>Deepest resilience building</li>
+                <li>2x Thai Massages included</li>
+              </ul>
+            </div>
+
+          </div>
+
+          <div className={styles.scheduleNote} style={{ marginTop: '0', marginBottom: 'var(--space-4xl)' }}>
+            <strong>Group Booking:</strong> 10% off for cohorts of 4+ men. <br/>
+            <strong>Early Commitment:</strong> $100 off when booked 90+ days in advance. <br/>
+            Secure your spot with a $300 deposit.
+          </div>
+
+          <SectionHeading
+            eyebrow="The Details"
+            title="What's Included"
+            align="center"
+          />
+
+          <div className={styles.detailsCard}>
+            {CATEGORIZED_INCLUSIONS.map((category, idx) => (
+              <div key={idx} className={styles.detailBlock}>
+                <div className={styles.detailLabel}>{category.category}</div>
                 <ul className={styles.detailList}>
-                  {included.map((item) => (
-                    <li key={item}>{item}</li>
+                  {category.items.map((item, itemIdx) => (
+                    <li key={itemIdx}>{item}</li>
                   ))}
                 </ul>
               </div>
+            ))}
+          </div>
 
-              <div className={styles.detailBlock}>
-                <div className={styles.detailLabelExcluded}>
-                  What&apos;s Not Included
-                </div>
-                <ul className={styles.detailList}>
-                  {notIncluded.map((item) => (
-                    <li key={item}>{item}</li>
-                  ))}
-                </ul>
-              </div>
-            </div>
+          <div className={styles.detailBlock} style={{ maxWidth: '800px', margin: '0 auto', textAlign: 'center' }}>
+            <div className={styles.detailLabelExcluded} style={{ marginBottom: 'var(--space-sm)' }}>What&apos;s Not Included</div>
+            <p style={{ color: 'var(--color-sandstone)', fontSize: 'var(--text-sm)', margin: '0' }}>
+              Flights to Chiang Mai, required travel insurance, and personal souvenirs.
+            </p>
           </div>
         </div>
       </section>

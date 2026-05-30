@@ -37,12 +37,16 @@ export function CTASection() {
           
           <SectionHeading 
             eyebrow="The Decision"
-            title="Seven days. One frontier. Everything changes."
+            title="This is seven days for you."
             align="center"
+            subtitle="You don't need to be ready. You just need to be willing."
           />
 
           <p className={styles.description}>
-            Iron Frontier is not for everyone. It requires you to get on a plane to Northern Thailand, train twice a day, sit in uncomfortable conversations, and invest seriously in yourself. The question is not whether you need this. You already know the answer to that. The question is whether you are ready to go.
+            You have been doing the right things for everyone else for a long time. Seven days to train something real, cut away what you've been carrying, find your direction, and come home as a more complete version of the man you already are.
+          </p>
+          <p className={styles.description}>
+            If something on this page made you stop and think — that is not an accident.
           </p>
 
           <div className={styles.detailsGrid}>

@@ -11,24 +11,52 @@ interface FAQItem {
 
 const FAQS: FAQItem[] = [
   {
-    question: "What is Iron Frontier and who is it designed for?",
-    answer: "Iron Frontier is an exclusive men's transformation retreat based in Lampang, Northern Thailand. It is specifically designed for driven, capable men—executives, entrepreneurs, veterans, and individuals going through major life transitions—who are ready to step away from daily distractions, push their physical limits, and cultivate deep mental resilience alongside a trusted brotherhood."
+    question: "Where exactly is Iron Frontier located?",
+    answer: "We are located in Lampang, a peaceful and culturally rich province in Northern Thailand, one hour outside of Chiang Mai and free from the heavy tourist crowds. All guests receive complimentary private airport transfers from Chiang Mai International Airport (CNX). We handle your travel from the moment you land until the moment you depart."
   },
   {
-    question: "Do I need prior Muay Thai or martial arts experience?",
+    question: "Do I need any Muay Thai or martial arts experience?",
     answer: "Absolutely not. Our training is fully customized. Whether you are a complete beginner who has never wrapped your hands, or an active competitive athlete, our expert Thai coaches design the sessions to meet you at your current level and push your boundaries safely."
   },
   {
-    question: "Where is the retreat located and how do I get there?",
-    answer: "We are located in Lampang, a peaceful and culturally rich province in Northern Thailand, free from the heavy tourist crowds. All guests receive complimentary private airport transfers from Chiang Mai International Airport (CNX). We handle your travel from the moment you land until the moment you depart."
+    question: "What fitness level do I need?",
+    answer: "You do not need to be in peak physical condition to attend, but you do need to be medically cleared for strenuous exercise. The training is scaled to your abilities, but it will be physically demanding. If you show up willing to work, you will be fine."
   },
   {
-    question: "What is included in the all-inclusive investment?",
-    answer: "Your investment covers everything once you arrive in Thailand: private or premium shared accommodation on our dedicated compound, three high-protein chef-prepared Thai and Western meals daily, all daily training sessions and mental development workshops, physical recovery facilities (including ice baths and saunas), a welcome training gear kit, airport transfers, and curated cultural excursions."
+    question: "What is the group like? Who else will be there?",
+    answer: "Cohorts are strictly capped at 12 men. Our guests are typically between 30 and 60 years old—executives, entrepreneurs, veterans, and capable men going through a transition. They are men who want to push themselves physically and engage honestly mentally. We vet every application to ensure group cohesion."
   },
   {
-    question: "How does the mental resilience aspect work?",
-    answer: "Unlike traditional fitness camps or retreats, we dedicatedly focus on the inner fight. Each afternoon includes structured mental health and self-development workshops, journaling, group integration circles, and guided reflection. We address the silent pressure men carry, offering practical frameworks to navigate stress, transitions, and purpose."
+    question: "Is this therapy? Do you have licensed therapists?",
+    answer: "No, this is not therapy and we are not a medical facility. We provide structured coaching, resilience workshops, and peer-led men's circles. If you are experiencing a severe mental health crisis or require clinical supervision, Iron Frontier is not the right fit for you."
+  },
+  {
+    question: "What if I have a physical injury or health condition?",
+    answer: "You must disclose all injuries and health conditions in your application. While our coaches are experts at modifying training around minor injuries, you must be physically capable of participating in daily athletic activity. We recommend consulting your physician before applying."
+  },
+  {
+    question: "Is alcohol available?",
+    answer: "No. Iron Frontier is a completely dry property. The work we do here requires a clear mind and optimal physical recovery. If you cannot go seven days without a drink, this is not the retreat for you."
+  },
+  {
+    question: "What is the cancellation policy?",
+    answer: "We require a $300 non-refundable deposit to secure your spot. The remaining balance is due 30 days before the retreat begins. Cancellations made 30+ days in advance will receive a full refund minus the deposit. Cancellations made within 30 days are non-refundable but can be credited toward a future retreat."
+  },
+  {
+    question: "Will I have free time?",
+    answer: "Yes. While the schedule is intentionally structured, we build in dedicated time for recovery, journaling, and stillness. You will have time to read, use the pool and ice bath, or simply rest. Recovery is a non-negotiable part of the process."
+  },
+  {
+    question: "What happens after the retreat?",
+    answer: "The real work begins when you go home. Every guest leaves with a 30-day integration plan to bridge the gap between the retreat and their daily life. You also gain lifetime access to the Iron Frontier Alumni Network—a private community of men who have completed the program."
+  },
+  {
+    question: "How do I get to Lampang?",
+    answer: "You will fly into Chiang Mai International Airport (CNX). Our team will greet you at the airport and provide private transport directly to the Iron Frontier compound in Lampang. The drive takes approximately one hour. We handle everything from the moment you land."
+  },
+  {
+    question: "Can I bring a friend or group?",
+    answer: "Yes. While most men attend solo, we welcome pairs or small groups who are committed to the same work. We offer a 10% discount for groups of 4 or more booking together. However, you will still be expected to engage fully with the rest of the cohort."
   }
 ];
 

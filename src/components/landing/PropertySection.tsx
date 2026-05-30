@@ -64,18 +64,37 @@ export function PropertySection() {
         <div className={styles.content}>
           <div className={styles.textContent}>
             <p className={styles.paragraph}>
-              The property has the character of an Old West frontier town — weathered wood, open land, buildings with history and personality. It is not a resort. It is a place that has earned its feel.
+              The property has the character of an Old West frontier town — weathered wood, open land, buildings with history and personality. It is not a resort with a pool bar and a gift shop. It is a place that has earned its feel — and when you arrive, you will understand immediately why it works.
             </p>
             <p className={styles.paragraph}>
-              While the rest of the world crowds into Bali and Koh Samui, Lampang sits largely undiscovered — a living piece of Northern Thai culture with ancient temples, horse-drawn carriages, and a pace of life that will recalibrate you in ways you won't fully understand until you're home.
+              While the rest of the world crowds into Bali and Koh Samui, Lampang sits largely undiscovered — one of the last truly authentic corners of Northern Thai culture. Horse-drawn carriages still move through the streets. Monks still walk at dawn. The mountains are close enough to feel and the river runs through the city like it has for a thousand years.
             </p>
             <p className={styles.paragraph}>
-              Getting here takes intention. Everything worth having does.
+              Getting here takes intention. That is part of the design. Everything worth having costs something.
             </p>
 
             <blockquote ref={quoteRef} className={styles.quote}>
               "Lampang is not on the tourist trail. That is the point."
             </blockquote>
+
+            <div className={styles.statsGrid}>
+              <div className={styles.statItem}>
+                <span className={styles.statValue}>2</span>
+                <span className={styles.statLabel}>Acres of private property</span>
+              </div>
+              <div className={styles.statItem}>
+                <span className={styles.statValue}>1hr</span>
+                <span className={styles.statLabel}>From Chiang Mai</span>
+              </div>
+              <div className={styles.statItem}>
+                <span className={styles.statValue}>12</span>
+                <span className={styles.statLabel}>Men max per cohort</span>
+              </div>
+              <div className={styles.statItem}>
+                <span className={styles.statValue}>7</span>
+                <span className={styles.statLabel}>Days that will change you</span>
+              </div>
+            </div>
           </div>
 
           <div ref={galleryRef} className={styles.gallery}>

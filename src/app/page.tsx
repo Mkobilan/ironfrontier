@@ -1,9 +1,12 @@
 import Image from 'next/image';
 import { Hero } from '@/components/landing/Hero';
+import { HookSection } from '@/components/landing/HookSection';
 import { AboutSection } from '@/components/landing/AboutSection';
 import { PillarSection } from '@/components/landing/PillarSection';
 import { PropertySection } from '@/components/landing/PropertySection';
 import { WhoSection } from '@/components/landing/WhoSection';
+import { BeforeAfterSection } from '@/components/landing/BeforeAfterSection';
+import { ObjectionsSection } from '@/components/landing/ObjectionsSection';
 import { BrotherhoodSection } from '@/components/landing/BrotherhoodSection';
 import { FAQSection } from '@/components/landing/FAQSection';
 import { CTASection } from '@/components/landing/CTASection';
@@ -35,10 +38,13 @@ export default function Home() {
         </div>
       </div>
 
+      <HookSection />
       <AboutSection />
       <PillarSection />
       <PropertySection />
       <WhoSection />
+      <BeforeAfterSection />
+      <ObjectionsSection />
       <BrotherhoodSection />
       <FAQSection />
       <CTASection />

@@ -73,14 +73,12 @@ export function Hero() {
         </div>
         
         <h1 ref={titleRef} className={styles.title}>
-          You've built a life. <br />
-          <span className={styles.titleHighlight}>Now it's time to build yourself.</span>
+          You did everything right. <br />
+          <span className={styles.titleHighlight}>So why does something feel wrong?</span>
         </h1>
         
         <p ref={textRef} className={styles.subtitle}>
-          Iron Frontier is a men's transformation retreat in the remote highlands of Northern Thailand. 
-          Seven days of Muay Thai training, mental resilience work, brotherhood, and the kind of stillness 
-          that only comes when you're far enough from your ordinary life to finally hear yourself think.
+          You built the career. You showed up. You kept it together when things got hard. But somewhere in the last few years, something shifted — a quiet restlessness, a body that's tired in a way sleep doesn't fix, a life that looks right from the outside and feels hollow from the inside. Iron Frontier is seven days in Northern Thailand that will change that.
         </p>
       </div>
 

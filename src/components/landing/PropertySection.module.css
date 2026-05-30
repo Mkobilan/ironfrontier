@@ -74,3 +74,39 @@
 .imageWrapper:hover .image {
   transform: scale(1.05);
 }
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-xl);
+  margin-top: var(--space-xl);
+  padding-top: var(--space-xl);
+  border-top: 1px solid var(--color-dust);
+}
+
+@media (min-width: 640px) {
+  .statsGrid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.statItem {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.statValue {
+  font-family: var(--font-rye);
+  font-size: var(--text-4xl);
+  color: var(--color-amber);
+  line-height: 1;
+}
+
+.statLabel {
+  font-family: var(--font-ibm-sans);
+  font-size: var(--text-sm);
+  color: var(--color-bone);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}

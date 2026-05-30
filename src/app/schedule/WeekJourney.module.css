@@ -1,0 +1,114 @@
+.section {
+  background-color: var(--color-void);
+  border-bottom: 1px solid var(--color-dust);
+  overflow: hidden;
+}
+
+.scrollWrapper {
+  margin-top: var(--space-4xl);
+  overflow-x: auto;
+  padding-bottom: var(--space-2xl);
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-dust) var(--color-charcoal);
+}
+
+.scrollWrapper::-webkit-scrollbar {
+  height: 8px;
+}
+
+.scrollWrapper::-webkit-scrollbar-track {
+  background: var(--color-charcoal);
+  border-radius: 4px;
+}
+
+.scrollWrapper::-webkit-scrollbar-thumb {
+  background-color: var(--color-dust);
+  border-radius: 4px;
+}
+
+.cardsContainer {
+  display: flex;
+  gap: var(--space-lg);
+  min-width: max-content;
+}
+
+@media (min-width: 1024px) {
+  .scrollWrapper {
+    overflow-x: visible;
+  }
+  .cardsContainer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    min-width: auto;
+    gap: var(--space-xl);
+  }
+}
+
+.card {
+  width: 280px;
+  background-color: var(--color-charcoal);
+  border: 1px solid var(--color-dust);
+  border-radius: var(--radius-sm);
+  padding: var(--space-xl);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+  transition: transform var(--transition-base), border-color var(--transition-base);
+}
+
+@media (min-width: 1024px) {
+  .card {
+    width: auto;
+  }
+  
+  /* Make the last few cards span across the grid nicely if it's a 4 column grid and 7 items */
+  .card:nth-child(5) {
+    grid-column: span 1;
+  }
+  .card:nth-child(6) {
+    grid-column: span 1;
+  }
+  .card:nth-child(7) {
+    grid-column: span 2;
+  }
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  border-color: var(--color-weathered);
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.dayNumber {
+  font-family: var(--font-rye);
+  font-size: var(--text-xl);
+  color: var(--color-amber);
+  white-space: nowrap;
+}
+
+.line {
+  height: 1px;
+  flex: 1;
+  background-color: var(--color-dust);
+}
+
+.cardTitle {
+  font-family: var(--font-playfair);
+  font-size: var(--text-xl);
+  color: var(--color-bone);
+  margin: 0;
+}
+
+.cardDescription {
+  font-family: var(--font-ibm-sans);
+  font-size: var(--text-sm);
+  color: var(--color-sandstone);
+  line-height: 1.6;
+  margin: 0;
+}

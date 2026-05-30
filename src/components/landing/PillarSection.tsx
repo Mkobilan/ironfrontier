@@ -6,11 +6,19 @@ import styles from './PillarSection.module.css';
 
 const PILLARS = [
   {
+    id: 'trailhead',
+    icon: '🥊',
+    name: 'TRAILHEAD',
+    tagline: 'Every journey begins somewhere. This is yours.',
+    description: 'The combat training pillar. The reason Iron Frontier is unlike anything else. Twice-daily Muay Thai and grappling sessions with world-class Thai trainers. Strength and conditioning. Pad work. Optional sparring. You do not need experience. You do not need to be in shape. You need to show up and be willing. What you will discover inside that ring is something no boardroom, no gym, and no therapist\'s office has ever shown you: you cannot fake it in there. You cannot check your phone. You cannot delegate the hard part. It is just you, your body, and the work. And most men find that the ring is where they start telling the truth — to themselves, and to the men beside them.',
+    features: ['Muay Thai — twice daily', 'MMA / grappling', 'Strength & conditioning', 'Pad work with Thai trainers', 'All skill levels welcome', 'Optional sparring'],
+  },
+  {
     id: 'outpost',
     icon: '🏕️',
     name: 'THE OUTPOST',
     tagline: 'This is where you regroup.',
-    description: 'You come depleted. You leave ready. The Outpost is our home base — the physical space at Iron Frontier where you eat, rest, recover, and reconnect. It represents the first and most important step: arriving. Stopping. Letting your nervous system catch up with you. Before the work begins, you have to get here. And getting here takes courage.',
+    description: 'The home base. The first step is simply arriving. Before any work begins, you have to get here. Stop. Let your nervous system catch up to your body. The Outpost is Iron Frontier\'s physical home — the place where you eat, sleep, recover, and begin to breathe differently. Private rooms with air conditioning. Three clean, nourishing Thai meals every day. Pool. Ice bath. Space. There is no itinerary in the world that works if a man is still running on the fumes of his ordinary life. The Outpost exists to land you. To give your body and your mind permission to stop performing. You came depleted. This is where you regroup.',
     features: ['Comfortable private accommodation', '3 clean meals daily', 'Pool & recovery space', 'Ice bath', 'Community meals', 'Old West property'],
   },
   {
@@ -18,7 +26,7 @@ const PILLARS = [
     icon: '🪓',
     name: 'DEADWOOD',
     tagline: 'Cut away what no longer serves you.',
-    description: 'Deadwood is dead wood — branches on a tree that block the light and drain the energy that living things need to grow. Most men carry it: old identities, buried stress, patterns picked up from fathers and culture and years of keeping it together. This pillar is the mental and emotional work. Group sessions. One-on-one coaching. Journaling. Men\'s circles. Breathwork. No therapy-speak. No judgment. Just honest work in a room full of men who get it.',
+    description: 'The mental and emotional work. No therapy-speak. No judgment. Deadwood is the dead weight on a living tree — the old growth that blocks the light and drains the energy that new things need to flourish. Most men carry it in silence. Old versions of themselves they never chose to become. Stress they absorbed and never processed. Patterns inherited from fathers and culture and years of keeping it together when no one asked if they were okay. This pillar is where that weight gets named and set down. Men\'s group circles. One-on-one coaching sessions. Journaling workshops. Breathwork. Honest conversation in a room full of men who are doing the same work. There is no clinical atmosphere here. No couch. No diagnosis. Just men, doing the work that actually matters.',
     features: ['Men\'s group circles', '1-on-1 coaching sessions', 'Breathwork', 'Journaling workshops', 'Emotional resilience training', 'Stress & burnout work'],
   },
   {
@@ -26,7 +34,7 @@ const PILLARS = [
     icon: '💧',
     name: 'STILL WATER',
     tagline: 'The calm is earned, not given.',
-    description: 'Still Water is the body\'s recovery and restoration pillar — the counterbalance to the intensity of combat training. Thai massage. Morning yoga. Meditation sessions at the water\'s edge. You can\'t pour from an empty cup, and you can\'t fight from a broken body. This is where you learn that stillness is not weakness — it is the highest form of discipline. The calm you\'ll carry home is not a gift. You will have earned it, day by day, session by session.',
+    description: 'Recovery, restoration, and the discipline of stillness. You cannot pour from an empty cup. You cannot fight from a broken body. You cannot think clearly from a mind that has not been quiet in years. Still Water is the counterweight to everything else at Iron Frontier — the morning yoga session, the guided meditation, the Thai massage, the evening walk to the water. Most men arrive thinking the physical training will be the hardest part. They are wrong. Sitting still is harder. Being quiet is harder. Letting the body actually rest, rather than just stopping temporarily — that is the real discipline. The calm you carry home from Iron Frontier is not a gift. You will have earned it, session by session, morning by morning.',
     features: ['Morning meditation', 'Daily yoga', 'Thai massage (included)', 'Breathwork', 'Sleep optimization', 'Nature walks'],
   },
   {
@@ -34,16 +42,8 @@ const PILLARS = [
     icon: '🧭',
     name: 'TRUE NORTH',
     tagline: 'Find your direction.',
-    description: 'True North is the leadership and purpose pillar — the work of figuring out who you actually are when no one is watching, and where you actually want to go. This is not life coaching in a fluorescent-lit office. This is deep personal clarity work done on the other side of the world, stripped of the noise and the obligations and the performance. By the time you leave, you will know what your True North is. And you will have a plan to walk toward it.',
+    description: 'The purpose and leadership pillar. Who are you when no one is watching? True North is the leadership concept that refers to a man\'s core values and authentic direction — the compass point that does not shift with trends, opinions, or pressure. Most men have never sat down long enough, quietly enough, and honestly enough to find theirs. This pillar is the work of figuring out who you actually are when the performance stops, and where you actually want to go next. Vision mapping. Values workshops. Purpose-finding sessions in the hills of Northern Thailand, at temple grounds that have been helping people find clarity for centuries. You will not leave Iron Frontier without a direction. And you will not leave without a plan to walk toward it.',
     features: ['Purpose & values workshops', 'Leadership development', 'Vision mapping', 'Temple visits & reflection', 'Cultural immersion', 'Group & solo reflection time'],
-  },
-  {
-    id: 'trailhead',
-    icon: '🥊',
-    name: 'TRAILHEAD',
-    tagline: 'Every journey begins somewhere. This is yours.',
-    description: 'Trailhead is the combat training pillar — and the reason Iron Frontier is unlike any other men\'s retreat on earth. Twice-daily Muay Thai and grappling sessions with world-class Thai trainers. No experience necessary. No judgment. What you will discover is that the ring is one of the most honest places on the planet. You cannot fake it. You cannot overthink it. You can only show up and do the work. Many men come to Iron Frontier for the wellness. They stay for the fighting.',
-    features: ['Muay Thai — twice daily', 'MMA / grappling', 'Strength & conditioning', 'Pad work with Thai trainers', 'All skill levels welcome', 'Optional sparring'],
   }
 ];
 
@@ -54,7 +54,7 @@ export function PillarSection() {
         <SectionHeading 
           eyebrow="The Five Pillars"
           title="The Framework"
-          subtitle="These are the five areas of work at Iron Frontier."
+          subtitle="This is not a retreat with one thing to offer. It is a complete recalibration — in five parts."
         />
 
         <div className={styles.pillarContainer}>

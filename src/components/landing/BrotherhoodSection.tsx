@@ -64,7 +64,7 @@ export function BrotherhoodSection() {
           
           <div className={styles.statsContainer}>
             <div className={styles.stat}>
-              <span className={styles.statNumber}>8-12</span>
+              <span className={styles.statNumber}>12</span>
               <span className={styles.statLabel}>Men maximum per retreat</span>
             </div>
           </div>
