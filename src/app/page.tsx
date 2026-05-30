@@ -12,17 +12,26 @@ export default function Home() {
     <main>
       <Hero />
       
-      <div style={{ display: 'flex', justifyContent: 'center', padding: 'var(--space-6xl) 0 var(--space-2xl)', backgroundColor: 'var(--color-void)' }}>
-        <Image 
-          src="/images/property/iron_frontier_brand_logo_1780129626942.png" 
-          alt="Iron Frontier Brand" 
-          width={160} 
-          height={160} 
-          style={{ 
-            opacity: 0.9, 
-            objectFit: 'contain'
-          }}
-        />
+      <div style={{ 
+        display: 'flex', 
+        justifyContent: 'center', 
+        alignItems: 'center',
+        minHeight: '100vh', 
+        backgroundColor: 'var(--color-void)',
+        padding: 'var(--space-4xl) var(--space-xl)'
+      }}>
+        <div style={{ position: 'relative', width: '100%', maxWidth: '800px', aspectRatio: '1/1' }}>
+          <Image 
+            src="/images/property/iron_frontier_brand_logo_1780129626942.png" 
+            alt="Iron Frontier Brand" 
+            fill
+            style={{ 
+              opacity: 0.9, 
+              objectFit: 'contain',
+              filter: 'drop-shadow(0 0 40px rgba(200, 149, 108, 0.15))'
+            }}
+          />
+        </div>
       </div>
 
       <AboutSection />
